@@ -9,7 +9,7 @@ const runCron = async () => {
   cron.schedule("*/2 * * * *", () => {
     console.log(`Checking status of vaccine: ${new Date().toLocaleString()}`)
     ;(async () => {
-      const browser = await puppeteer.launch()
+      const browser = await puppeteer.launch({})
       const page = await browser.newPage()
       await page.goto("https://www.cvs.com/immunizations/covid-19-vaccine")
 
@@ -32,7 +32,7 @@ const runCron = async () => {
         console.log(
           `${new Date().toLocaleString()}: Looks like there are still no appointments available.`
         )
-        available = true
+        available = false
       } else {
         console.log(
           `${new Date().toLocaleString()}: Oooh! It looks like there are appointments available!`
