@@ -7,7 +7,6 @@
     "express": "^4.17.1",
     "node-cron": "^2.0.3",
     "nodemailer": "^6.4.17",
-    "puppeteer": "^5.5.0",
-    "sound-play": "^1.1.0"
+    "puppeteer": "^5.5.0"
   }
 }

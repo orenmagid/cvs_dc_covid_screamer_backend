@@ -6,7 +6,7 @@ let available = false
 
 const runCron = async () => {
   console.log("Starting cronjob...")
-  cron.schedule("*/5 * * * *", () => {
+  cron.schedule("*/2 * * * *", () => {
     console.log(`Checking status of vaccine: ${new Date().toLocaleString()}`)
     ;(async () => {
       const browser = await puppeteer.launch()
